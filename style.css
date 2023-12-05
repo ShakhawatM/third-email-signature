@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+  font-family: "Arimo", sans-serif;
+  text-decoration: none;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+
+body {
+  min-height: 100vh;
+  background: #8eecf5;
+  height: 400px;
+  min-height: 100vh;
+  background: #8eecf5;
+}
+
+.main {
+
+}
+
+.main .box-container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-container .box .image img {
+  width: 200px;
+  height: 200px;
+}
+
+.box-container .box .content .info {
+  padding: 10px 0 0 20px;
+  display: flex;
+  flex-flow: column;
+}
+
+.box-container .box .content {
+  border-left: 3px solid #023e8a;
+  height: 200px;
+  margin-left: 20px;
+}
