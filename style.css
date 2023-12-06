@@ -11,14 +11,24 @@
 
 body {
   min-height: 100vh;
-  background: #8eecf5;
-  height: 400px;
-  min-height: 100vh;
-  background: #8eecf5;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/book.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.main {
-
+.main .box-container {
+  border-radius: 5px;
+  background-color: rgb(224, 212, 212);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  padding: 20px;
 }
 
 .main .box-container .box {
@@ -27,9 +37,20 @@ body {
   justify-content: center;
 }
 
+.box-container .box .image {
+  margin-right: 20px;
+  width: 300px;
+}
+
 .box-container .box .image img {
   width: 200px;
   height: 200px;
+}
+
+.box-container .box .content {
+  border-left: 3px solid #023e8a;
+  height: 200px;
+  margin-left: -70px;
 }
 
 .box-container .box .content .info {
@@ -38,8 +59,117 @@ body {
   flex-flow: column;
 }
 
-.box-container .box .content {
-  border-left: 3px solid #023e8a;
-  height: 200px;
-  margin-left: 20px;
+.box-container .box .content .info .title {
+  display: flex;
+  align-items: center;
+}
+
+.box-container .box .content .info .title span{
+  font-weight: 600;
+}
+
+.box-container .box .content .info .style-letter {
+  font-family: "Meow Script", cursive;
+}
+
+.main .box-container .text {
+  max-width: 700px;
+  height: 100px;
+  margin: 20px;
+}
+
+.box-container .box .content .info .style-letter {
+  font-family: "Meow Script", cursive;
+}
+
+.box-container .box .content .info .title {
+  display: flex;
+  align-items: center;
+}
+
+.box-container .box .content .info .title h2 {
+  margin: 10px 10px 10px 0;
+  color: #4c1b17;
+}
+
+.box-container .box .content .info a {
+  color: #000;
+  margin: 3px 0;
+}
+.box-container .box .content .info a:hover {
+  color: #89a79f;
+}
+
+.box-container .box .content .info i {
+  margin-right: 10px;
+  color: #89a79f;
+}
+.box-container .box .content .info i:hover {
+  color: #4c1b17;
+}
+
+.box-container .box .content .info button {
+  background-color: #89a79f;
+  color: #4c1b17;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 5px rgba(158, 147, 147, 0.2);
+}
+.box-container .box .content .info button:hover {
+  background-color: #060c3c;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .box-container {
+    flex-flow: column;
+    padding-bottom: 100px;
+    margin: 20px;
+    width: 330px;
+  }
+
+  .main .box-container .box {
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .box-container .box .image {
+    margin-top: 30px;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #023e8a;
+  }
+
+  .box-container .box .image img {
+    margin-bottom: 20px;
+  }
+
+  .box-container .box .content .info {
+    padding: 10px 0 50px 20px;
+  }
+
+  .box-container .box .content .info .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .box-container .box .content {
+    border: none;
+  }
+  .box-container .box .content .info .style-letter {
+    font-family: "Meow Script", cursive;
+  }
+
+  .main .box-container .text {
+    max-width: 700px;
+    height: 200px;
+    margin: 20px;
+  }
 }
